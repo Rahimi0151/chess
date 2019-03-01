@@ -34,6 +34,12 @@ class Piece():
             self.X = X
             self.Y = Y
 
+    def is_black( self ):
+        return self.color == self.BLACK
+
+    def is_white( self ):
+        return self.color == self.WHITE
+
 
 
 
