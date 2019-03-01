@@ -18,6 +18,12 @@ class Piece():
     def get_position ( self ):
         return ( self.X , self.Y )
 
+    def getX ( self ):
+        return self.X
+        
+    def getY ( self ):
+        return self.Y
+
     def is_on_board( self , X , Y ):
         if ( ( X == None ) or ( Y == None) ):
             return True
