@@ -1,3 +1,4 @@
+
 from Piece import Piece
 
 class Piece_Pawn ( Piece ):

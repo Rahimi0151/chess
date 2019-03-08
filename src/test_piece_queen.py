@@ -1,8 +1,9 @@
+from Board import Board
 from Piece_Queen import Piece_Queen
 import pytest
 
 def test_queen_can_go_in_diagonal_or_straight_line():
-    queen = Piece_Queen( "Black" , 1 , 2 )
+    queen = Piece_Queen( Board() , "Black" , 1 , 2 )
     assert queen.get_position() == ( 1 , 2 )
 
     # Diagonal

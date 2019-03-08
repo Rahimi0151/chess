@@ -1,8 +1,9 @@
+from Board import Board
 from Piece_Knight import Piece_Knight
 import pytest
 
 def test_knight_can_go_in_L_shaped_line():
-    knight = Piece_Knight( "Black" , 1 , 2 )
+    knight = Piece_Knight( Board() , "Black" , 1 , 2 )
     assert knight.get_position() == ( 1 , 2 )
 
     knight.go_to( 3 , 3 )

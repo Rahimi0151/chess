@@ -1,8 +1,9 @@
+from Board import Board
 from Piece_King import Piece_King
 import pytest
 
 def test_king_can_go_in_one_square_at_a_time():
-    king = Piece_King( "Black" , 1 , 2 )
+    king = Piece_King( Board() , "Black" , 1 , 2 )
     assert king.get_position() == ( 1 , 2 )
 
     with pytest.raises(Exception):
