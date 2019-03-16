@@ -1,11 +1,12 @@
 from Piece import Piece
 
 class Piece_Bishop ( Piece ):
+
     def is_allowed_move ( self , toX , toY ):
         fromX = self.get_position()[0]
         fromY = self.get_position()[1]
 
-        if not( ( abs( fromX - toX ) - abs( fromY - toY) ) == 0 ) :
+        if not( ( abs( fromX - toX ) == abs( fromY - toY) ) ) :
             raise Exception("invalid move: bishop can only move in a diagonal line")
         return True
 
