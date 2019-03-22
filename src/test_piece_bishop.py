@@ -13,3 +13,15 @@ def test_bishop_can_go_in_diagonal_line():
 
     bishop.go_to( 3 , 4 )
     assert bishop.get_position() == ( 3 , 4 )
+
+def test_bishop_cant_jump_over_any_piece():
+    board = Board()
+    bishop1 = Piece_Bishop( board , "Black" , 1 , 1)
+    bishop2 = Piece_Bishop( board , "Black" , 2 , 2)
+
+    with pytest.raises(Exception):
+        bishop1.go_to( 3 , 3 )
+    assert bishop1.get_position() == ( 1 , 1 )
+
+
+
